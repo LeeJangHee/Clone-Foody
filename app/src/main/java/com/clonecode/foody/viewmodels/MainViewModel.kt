@@ -1,10 +1,9 @@
-package com.clonecode.foody
+package com.clonecode.foody.viewmodels
 
 import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkRequest
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
@@ -12,7 +11,6 @@ import androidx.lifecycle.viewModelScope
 import com.clonecode.foody.data.Repository
 import com.clonecode.foody.models.FoodRecipe
 import com.clonecode.foody.util.NetworkResult
-import kotlinx.coroutines.handleCoroutineException
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
@@ -29,7 +27,6 @@ class MainViewModel @ViewModelInject constructor(
 
     private suspend fun getRecipesSafeCall(queries: Map<String, String>) {
         recipesResponse.value = NetworkResult.Loading()
-
         if (hasInternetConnection()) {
             try {
                 val response = repository.remote.getRecipes(queries)
@@ -45,12 +42,12 @@ class MainViewModel @ViewModelInject constructor(
     private fun handleFoodRecipesResponse(response: Response<FoodRecipe>): NetworkResult<FoodRecipe>? {
         when {
             response.message().toString().contains("timeout") -> {
-                return NetworkResult.Error("Timeout.")
+                return NetworkResult.Error("Timeout")
             }
             response.code() == 402 -> {
                 return NetworkResult.Error("API Key Limited.")
             }
-            response.body()!!.results.isNotEmpty() -> {
+            response.body()!!.results.isNullOrEmpty() -> {
                 return NetworkResult.Error("Recipes not found.")
             }
             response.isSuccessful -> {
