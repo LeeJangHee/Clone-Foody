@@ -1,4 +1,4 @@
-package com.clonecode.foody
+package com.clonecode.foody.util
 
 class Constants {
 

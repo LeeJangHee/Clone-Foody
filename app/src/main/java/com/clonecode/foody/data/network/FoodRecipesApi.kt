@@ -1,4 +1,4 @@
-package com.clonecode.foody
+package com.clonecode.foody.data.network
 
 import com.clonecode.foody.models.FoodRecipe
 import retrofit2.Response
