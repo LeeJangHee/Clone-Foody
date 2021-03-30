@@ -35,10 +35,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
             android:layout_marginBottom="24dp"
-            app:tint="@color/white"
             android:clickable="true"
+            app:tint="@color/white"
             android:src="@drawable/ic_restaurant"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +55,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recyclerview"
             app:layout_constraintVertical_bias="0.37" />
 
         <TextView
@@ -67,7 +66,6 @@
             readDatabase2="@{mainViewModel.readRecipes}"
             android:layout_marginTop="8dp"
             android:alpha="0.5"
-            android:text="No Internet Connection."
             android:textSize="18sp"
             android:textStyle="bold"
             android:visibility="invisible"
