@@ -31,14 +31,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
+            android:id="@+id/recipes_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
             android:layout_marginBottom="24dp"
-            app:tint="@color/white"
             android:clickable="true"
+            app:tint="@color/white"
             android:src="@drawable/ic_restaurant"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,14 +48,14 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             readApiResponse="@{mainViewModel.recipesResponse}"
-            readDatabase="@{mainViewModel.readRecipe}"
+            readDatabase="@{mainViewModel.readRecipes}"
             android:alpha="0.5"
             android:src="@drawable/ic_sad"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recyclerview"
             app:layout_constraintVertical_bias="0.37" />
 
         <TextView
@@ -64,10 +63,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             readApiResponse2="@{mainViewModel.recipesResponse}"
-            readDatabase2="@{mainViewModel.readRecipe}"
+            readDatabase2="@{mainViewModel.readRecipes}"
             android:layout_marginTop="8dp"
             android:alpha="0.5"
-            android:text="No Internet Connection."
             android:textSize="18sp"
             android:textStyle="bold"
             android:visibility="invisible"
