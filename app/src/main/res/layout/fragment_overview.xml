@@ -7,7 +7,7 @@
     tools:context=".ui.fragments.overview.OverviewFragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/main_imageView"
         android:layout_width="0dp"
         android:layout_height="250dp"
         android:scaleType="centerCrop"
@@ -21,10 +21,10 @@
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:background="@drawable/gradient_overlay"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/main_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/main_imageView"
+        app:layout_constraintStart_toStartOf="@+id/main_imageView"
+        app:layout_constraintTop_toTopOf="@+id/main_imageView"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -37,7 +37,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/main_imageView"
         app:layout_constraintEnd_toEndOf="@+id/gradient_overlay" />
 
     <ImageView
@@ -86,7 +86,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/main_imageView" />
 
     <ImageView
         android:id="@+id/vegetarian_imageView"
