@@ -7,7 +7,7 @@ import android.net.NetworkCapabilities
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import com.clonecode.foody.data.Repository
-import com.clonecode.foody.data.database.RecipesEntity
+import com.clonecode.foody.data.database.entities.RecipesEntity
 import com.clonecode.foody.models.FoodRecipe
 import com.clonecode.foody.util.NetworkResult
 import kotlinx.coroutines.Dispatchers
