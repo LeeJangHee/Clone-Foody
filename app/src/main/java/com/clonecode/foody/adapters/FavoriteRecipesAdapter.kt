@@ -183,4 +183,10 @@ class FavoriteRecipesAdapter(
         ).setAction("OK"){}
             .show()
     }
+
+    fun clearContextualActionMode() {
+        if (this::mActionMode.isInitialized) {
+            mActionMode.finish()
+        }
+    }
 }
