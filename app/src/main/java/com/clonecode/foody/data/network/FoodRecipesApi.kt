@@ -21,6 +21,6 @@ interface FoodRecipesApi {
 
     @GET("/food/jokes/random")
     suspend fun getFoodJoke(
-        @Query("apkKey") apkKey: String
+        @Query("apiKey") apiKey: String
     ): Response<FoodJoke>
 }
