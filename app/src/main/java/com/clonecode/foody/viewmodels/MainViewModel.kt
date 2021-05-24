@@ -69,7 +69,6 @@ class MainViewModel @ViewModelInject constructor(
         getFoodJokeSafeCall(apiKey)
     }
 
-
     private suspend fun getRecipesSafeCall(queries: Map<String, String>) {
         recipesResponse.value = NetworkResult.Loading()
         if (hasInternetConnection()) {
