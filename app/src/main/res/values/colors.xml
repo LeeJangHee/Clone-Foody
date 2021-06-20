@@ -25,6 +25,7 @@
     <!--  LIGHT THEME  -->
     
     <color name="backgroundColor">@color/lightGray</color>
+    <color name="placeholderColor">@color/lightGray</color>
     
     // Custom CHip Style
     <color name="checkedChipBackgroundColor">#206200EA</color>
